@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta content="IE=dege,chrom=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <title>Cart</title>
+    <link href="css/base.css" rel="stylesheet">
+    <style type="text/css">
+        .quentity input {
+            width: 40px;
+            padding: 5px 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout">
+
+      <div id="app">
+          {{msg}}}
+          <h3>游戏列表</h3>
+          <div v-if="seen">我的最爱
+              <ol>
+                  <li v-for="game in games">{{game.title}}/{{game.time}}</li>
+                  <li v-for="item in list">{{item}}</li>
+              </ol>
+          </div>
+      </div>
+    </div>
+
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+    <script src="js/Cart.js"></script>
+</body>
+</html>
